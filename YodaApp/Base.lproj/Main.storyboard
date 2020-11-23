@@ -1,24 +1,381 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mm1-fa-4CB">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AssistanceVC-->
+        <scene sceneID="BEM-z9-M3a">
+            <objects>
+                <viewController storyboardIdentifier="AlertVC" modalPresentationStyle="fullScreen" id="Uli-nD-mdX" customClass="AssistanceVC" customModule="YodaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gc3-fO-qza">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dkb-x0-yw4">
+                                <rect key="frame" x="15" y="59" width="345" height="339"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips &amp; Tricks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtH-qV-a1X">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BXW-6l-KQO">
+                                        <rect key="frame" x="0.0" y="46" width="345" height="172"/>
+                                        <string key="text">You must use proper punctuation (apostrophes, full stops, commas, etc.) in order for this to work. Yoda's language is like English, but with very different grammar.Not much is going to change if you just use one or two words, like 'Hello'. Also make sure that each sentence clause is separated by punctuation; e.g. ''Hi, you're new here, aren't you?' Thank you!"</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNK-Hj-OgM">
+                                        <rect key="frame" x="0.0" y="235" width="345" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGf-fs-oke">
+                                        <rect key="frame" x="0.0" y="281" width="345" height="58"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Yoda translation API is public.  For this app, I can only call 60 API a day with a distribution of 5 calls an hour.">
+                                                <attributes>
+                                                    <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aO3-8R-8Wk" firstAttribute="trailing" secondItem="Dkb-x0-yw4" secondAttribute="trailing" constant="15" id="DNp-v1-10T"/>
+                            <constraint firstItem="Dkb-x0-yw4" firstAttribute="leading" secondItem="aO3-8R-8Wk" secondAttribute="leading" constant="15" id="pUO-HO-tGN"/>
+                            <constraint firstItem="Dkb-x0-yw4" firstAttribute="top" secondItem="aO3-8R-8Wk" secondAttribute="top" constant="15" id="vNL-Vt-OjL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aO3-8R-8Wk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N12-lB-hD4"/>
+                    <connections>
+                        <outlet property="howToDesctiptionLbl" destination="BXW-6l-KQO" id="JLg-XK-ijI"/>
+                        <outlet property="howToLbl" destination="wtH-qV-a1X" id="AoU-fO-yEA"/>
+                        <outlet property="noteDesctiptionLbl" destination="hGf-fs-oke" id="plD-cg-64D"/>
+                        <outlet property="noteLbl" destination="PNK-Hj-OgM" id="GLH-Ix-14w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVg-Re-5pB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3778" y="-556"/>
+        </scene>
+        <!--Onboarding ScreensVC-->
+        <scene sceneID="5se-9p-hDC">
+            <objects>
+                <viewController storyboardIdentifier="onBoardingVC" id="ic6-Y0-VqR" customClass="OnboardingScreensVC" customModule="YodaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qWk-67-rap">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-Zb-xI5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AHB-Zb-xI5" secondAttribute="height" multiplier="1:1" id="mms-tD-u4Z"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qjY-Uy-dCR">
+                                    <size key="itemSize" width="413" height="364"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="YodaOnboardingCell" id="8TS-pw-poP" customClass="OnBoardingCollectionViewCell" customModule="YodaApp" customModuleProvider="target">
+                                        <rect key="frame" x="-19" y="0.0" width="413" height="364"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0A3-v7-se3">
+                                            <rect key="frame" x="0.0" y="0.0" width="413" height="364"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyYoda" translatesAutoresizingMaskIntoConstraints="NO" id="kQ8-7V-WWj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="413" height="364"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="kQ8-7V-WWj" secondAttribute="bottom" id="5wC-it-oh8"/>
+                                                <constraint firstItem="kQ8-7V-WWj" firstAttribute="top" secondItem="0A3-v7-se3" secondAttribute="top" id="EYf-yf-SVN"/>
+                                                <constraint firstItem="kQ8-7V-WWj" firstAttribute="leading" secondItem="0A3-v7-se3" secondAttribute="leading" id="evi-CZ-Zdx"/>
+                                                <constraint firstAttribute="trailing" secondItem="kQ8-7V-WWj" secondAttribute="trailing" id="fQa-jG-bNq"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="413" height="364"/>
+                                        <connections>
+                                            <outlet property="onboardingSliderImgView" destination="kQ8-7V-WWj" id="x48-Eg-1MQ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to YodishTranslator" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EVF-1b-4Jj">
+                                <rect key="frame" x="16" y="410" width="326" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="EdI-S4-pHR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convert from English to Yoda speak. Yoda is a fictional character from the Movie star wars." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fLd-Dc-1KL">
+                                <rect key="frame" x="16" y="450" width="343" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="sFH-i7-JeO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2D6-Nu-Zqm">
+                                <rect key="frame" x="16" y="586" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.91362810130000005" green="0.9765236974" blue="0.90577381850000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="W70-bI-eBT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" red="0.35270720719999998" green="0.77258545160000003" blue="0.22740972039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getStartedBtnTapped:" destination="ic6-Y0-VqR" eventType="touchUpInside" id="KHi-t0-cq9"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="AhF-dy-fZM">
+                                <rect key="frame" x="168" y="541" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.88619571919999995" green="0.8902463317" blue="0.89793193339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.47830665109999998" green="0.70984023809999997" blue="0.4783686996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe on the image to learn more." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF6-ZD-mGK">
+                                <rect key="frame" x="16" y="376" width="220.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jho-Ce-kI6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OF6-ZD-mGK" firstAttribute="leading" secondItem="1tb-rq-pfV" secondAttribute="leading" constant="16" id="1zE-Tx-KWF"/>
+                            <constraint firstItem="1tb-rq-pfV" firstAttribute="trailing" secondItem="fLd-Dc-1KL" secondAttribute="trailing" constant="16" id="BTf-JE-dl4"/>
+                            <constraint firstItem="OF6-ZD-mGK" firstAttribute="top" secondItem="AHB-Zb-xI5" secondAttribute="bottom" constant="1" id="K5V-X9-lBv"/>
+                            <constraint firstItem="2D6-Nu-Zqm" firstAttribute="top" secondItem="AhF-dy-fZM" secondAttribute="bottom" constant="8" id="KSR-kI-PVS"/>
+                            <constraint firstItem="fLd-Dc-1KL" firstAttribute="leading" secondItem="1tb-rq-pfV" secondAttribute="leading" constant="16" id="MHi-r2-Wen"/>
+                            <constraint firstItem="1tb-rq-pfV" firstAttribute="trailing" secondItem="EVF-1b-4Jj" secondAttribute="trailing" constant="33" id="Mca-py-qCv"/>
+                            <constraint firstItem="AHB-Zb-xI5" firstAttribute="top" secondItem="qWk-67-rap" secondAttribute="top" id="NR8-KY-bBj"/>
+                            <constraint firstItem="2D6-Nu-Zqm" firstAttribute="leading" secondItem="1tb-rq-pfV" secondAttribute="leading" constant="16" id="RNR-iL-EDF"/>
+                            <constraint firstItem="fLd-Dc-1KL" firstAttribute="top" secondItem="EVF-1b-4Jj" secondAttribute="bottom" constant="8" id="Yfl-zV-hVA"/>
+                            <constraint firstItem="AhF-dy-fZM" firstAttribute="centerX" secondItem="1tb-rq-pfV" secondAttribute="centerX" id="bAp-9v-ZaY"/>
+                            <constraint firstItem="AHB-Zb-xI5" firstAttribute="trailing" secondItem="1tb-rq-pfV" secondAttribute="trailing" id="bDw-h1-H0T"/>
+                            <constraint firstItem="1tb-rq-pfV" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OF6-ZD-mGK" secondAttribute="trailing" symbolic="YES" id="hyW-4m-8XN"/>
+                            <constraint firstItem="1tb-rq-pfV" firstAttribute="trailing" secondItem="2D6-Nu-Zqm" secondAttribute="trailing" constant="16" id="lZ2-eo-Rg1"/>
+                            <constraint firstItem="1tb-rq-pfV" firstAttribute="bottom" secondItem="2D6-Nu-Zqm" secondAttribute="bottom" constant="31" id="oTq-mm-aLs"/>
+                            <constraint firstItem="AHB-Zb-xI5" firstAttribute="leading" secondItem="1tb-rq-pfV" secondAttribute="leading" id="pHj-Q3-AkE"/>
+                            <constraint firstItem="EVF-1b-4Jj" firstAttribute="leading" secondItem="1tb-rq-pfV" secondAttribute="leading" constant="16" id="rw8-5d-yp2"/>
+                            <constraint firstItem="EVF-1b-4Jj" firstAttribute="top" secondItem="OF6-ZD-mGK" secondAttribute="bottom" constant="13" id="u1g-Ou-X5W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1tb-rq-pfV"/>
+                    </view>
+                    <connections>
+                        <outlet property="desctiptionLbl" destination="fLd-Dc-1KL" id="yDq-YY-PYf"/>
+                        <outlet property="getStartedBtn" destination="2D6-Nu-Zqm" id="Hzp-QL-CxS"/>
+                        <outlet property="onBoardingCollectionView" destination="AHB-Zb-xI5" id="kjB-85-1Fi"/>
+                        <outlet property="pageController" destination="AhF-dy-fZM" id="FK8-I0-iVD"/>
+                        <outlet property="titleLbl" destination="EVF-1b-4Jj" id="Mpc-Cb-oDR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2wj-yK-Bar" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2134" y="126"/>
+        </scene>
+        <!--Yoda TranslationVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="YodaTranslationVC" customModule="YodaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" YodishTranslator" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uVr-kI-cfn">
+                                <rect key="frame" x="15" y="15" width="185.5" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Coj-Ld-ONp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBS-XK-S8z">
+                                <rect key="frame" x="16" y="348" width="343" height="48"/>
+                                <color key="backgroundColor" red="0.82737791540000005" green="0.82749670740000003" blue="0.78029888869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="hm4-Ig-nUx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Convert to Yodish">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertToYodishBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yzg-Ii-YJf"/>
+                                </connections>
+                            </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F5f-lD-sDw">
+                                <rect key="frame" x="16" y="412" width="343" height="80"/>
+                                <color key="backgroundColor" red="0.47830665109999998" green="0.70984023809999997" blue="0.4783686996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="vvu-SH-ejY"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YodaThinking" translatesAutoresizingMaskIntoConstraints="NO" id="zmG-V2-HYh">
+                                <rect key="frame" x="15" y="60" width="345" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="cWO-BT-eth"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LW-yE-myW">
+                                <rect key="frame" x="309" y="22" width="50" height="27"/>
+                                <color key="backgroundColor" red="0.91362810130000005" green="0.9765236974" blue="0.90577381850000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="nKr-Jo-tl6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="z41-fT-ewa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="tintColor" red="0.35270720719999998" green="0.77258545160000003" blue="0.22740972039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Tips">
+                                    <color key="titleColor" red="0.35270720719999998" green="0.77258545160000003" blue="0.22740972039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fmS-Vq-hId" kind="show" id="4OR-h1-ETz"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2i2-dD-YFk">
+                                <rect key="frame" x="16" y="253" width="343" height="80"/>
+                                <color key="backgroundColor" red="0.47830665109999998" green="0.70984023809999997" blue="0.4783686996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="WmY-ge-NWt"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type your sentence below!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeZ-EU-Td2">
+                                <rect key="frame" x="85" y="227" width="205" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cGi-I4-H6W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="nmQ-Je-h1Q">
+                                <rect key="frame" x="169" y="434" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="pgC-NI-Ogf"/>
+                                    <constraint firstAttribute="height" constant="37" id="q8j-hH-8wt"/>
+                                </constraints>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F5f-lD-sDw" secondAttribute="trailing" constant="16" id="0z5-T4-Dcz"/>
+                            <constraint firstItem="2i2-dD-YFk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5sf-VT-SSe"/>
+                            <constraint firstItem="2LW-yE-myW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uVr-kI-cfn" secondAttribute="trailing" constant="8" symbolic="YES" id="5zF-8u-188"/>
+                            <constraint firstItem="nmQ-Je-h1Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="8Ca-hU-jFI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nmQ-Je-h1Q" secondAttribute="trailing" constant="169" id="8yR-2d-rvR"/>
+                            <constraint firstItem="CeZ-EU-Td2" firstAttribute="top" secondItem="zmG-V2-HYh" secondAttribute="bottom" constant="10" id="BGn-oZ-Tkd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zmG-V2-HYh" secondAttribute="trailing" constant="15" id="DWu-9i-Sqc"/>
+                            <constraint firstItem="2i2-dD-YFk" firstAttribute="top" secondItem="CeZ-EU-Td2" secondAttribute="bottom" constant="5" id="F4N-Ao-IWw"/>
+                            <constraint firstItem="F5f-lD-sDw" firstAttribute="top" secondItem="EBS-XK-S8z" secondAttribute="bottom" constant="16" id="GeK-Ra-zhk"/>
+                            <constraint firstItem="2LW-yE-myW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="IGp-XV-2Ha"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EBS-XK-S8z" secondAttribute="trailing" constant="16" id="LtV-Sy-QD2"/>
+                            <constraint firstItem="uVr-kI-cfn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="PBJ-33-LUI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2i2-dD-YFk" secondAttribute="trailing" constant="16" id="PLE-Kf-7hR"/>
+                            <constraint firstItem="F5f-lD-sDw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="S4q-yR-XYd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CeZ-EU-Td2" secondAttribute="trailing" constant="85" id="UwK-D4-Cyp"/>
+                            <constraint firstItem="uVr-kI-cfn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Vbe-aw-zUm"/>
+                            <constraint firstItem="CeZ-EU-Td2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="ZRI-gd-UxP"/>
+                            <constraint firstItem="zmG-V2-HYh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="eiU-jQ-1AM"/>
+                            <constraint firstItem="nmQ-Je-h1Q" firstAttribute="top" secondItem="EBS-XK-S8z" secondAttribute="bottom" constant="38" id="j3k-8C-PKs"/>
+                            <constraint firstItem="zmG-V2-HYh" firstAttribute="top" secondItem="uVr-kI-cfn" secondAttribute="bottom" constant="5" id="l6s-7f-Lfa"/>
+                            <constraint firstItem="EBS-XK-S8z" firstAttribute="top" secondItem="2i2-dD-YFk" secondAttribute="bottom" constant="15" id="mo3-qo-fdR"/>
+                            <constraint firstItem="EBS-XK-S8z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tz3-xw-gYi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2LW-yE-myW" secondAttribute="trailing" constant="16" id="w3X-CX-qPE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fuo-Yt-cam"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="nmQ-Je-h1Q" id="HKk-mW-3Be"/>
+                        <outlet property="convertToYodishBtn" destination="EBS-XK-S8z" id="gwt-tu-PTP"/>
+                        <outlet property="needAssistanceBtn" destination="2LW-yE-myW" id="QiF-oz-s8S"/>
+                        <outlet property="translatedToYodishTextView" destination="F5f-lD-sDw" id="tNe-cz-tAQ"/>
+                        <outlet property="userQuoteTextView" destination="2i2-dD-YFk" id="w4u-Cv-5w1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3776.8000000000002" y="126.38680659670166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vcZ-Iw-ndM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="fmS-Vq-hId" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="nj0-dw-D3H"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hfc-ci-kWO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Uli-nD-mdX" kind="relationship" relationship="rootViewController" id="SJV-JP-BNv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B18-lD-XGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2948" y="-556"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bgF-OR-cSx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="mm1-fa-4CB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cbv-do-2wc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Fw8-Mp-Fsb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nr3-5N-qOk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2948" y="127"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HappyYoda" width="512" height="512"/>
+        <image name="YodaThinking" width="662" height="377"/>
+    </resources>
 </document>
