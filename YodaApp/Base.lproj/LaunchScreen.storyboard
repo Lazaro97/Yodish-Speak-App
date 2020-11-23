@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YodaHead" translatesAutoresizingMaskIntoConstraints="NO" id="d7j-nB-qND">
-                                <rect key="frame" x="20" y="354" width="374" height="128"/>
+                                <rect key="frame" x="20" y="389" width="374" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="bUR-Q5-X96"/>
                                     <constraint firstAttribute="width" constant="374" id="gJ4-pd-18z"/>
@@ -26,7 +26,7 @@
                         <color key="backgroundColor" red="0.0" green="0.25491634010000003" blue="0.13723012800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="d7j-nB-qND" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IMT-gD-DSn"/>
-                            <constraint firstItem="d7j-nB-qND" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="310" id="Pp8-Qe-Q8l"/>
+                            <constraint firstItem="d7j-nB-qND" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="OIe-df-gQq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d7j-nB-qND" secondAttribute="trailing" constant="20" id="Sft-qc-f3z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
