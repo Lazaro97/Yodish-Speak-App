@@ -6,6 +6,13 @@ This is not a chatbot, nor does it generate any audio.
 
 Clone the project and pod install the Cocoapods. Then build and run in Xcode.
 
+## Screen Shots
+
+<img src="https://user-images.githubusercontent.com/23208235/100130529-cf976900-2e50-11eb-8da0-f1a63c035059.png">
+
+<img src="https://user-images.githubusercontent.com/23208235/100130537-d0c89600-2e50-11eb-8bcf-813847241f03.png">
+
+
 ## UISupport
 
 IPhone Portrait Only
